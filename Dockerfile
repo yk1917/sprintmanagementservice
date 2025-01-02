@@ -1,4 +1,4 @@
-FROM openjdk:21-jdk
+FROM openjdk:17-jdk
 WORKDIR /app
 COPY target/sprint-management-service-0.0.1-SNAPSHOT.jar sprint-management-service.jar
 EXPOSE 8080
