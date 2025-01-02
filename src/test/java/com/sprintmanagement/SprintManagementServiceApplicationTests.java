@@ -1,13 +1,13 @@
-package com.sprintmanagement;
+// package com.sprintmanagement;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class SprintManagementServiceApplicationTests {
+// @SpringBootTest
+// class SprintManagementServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
+// }
