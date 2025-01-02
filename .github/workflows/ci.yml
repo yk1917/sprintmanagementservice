@@ -1,0 +1,36 @@
+
+name: CICD
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Java JDK 21
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '21'
+
+      - name: Build Project
+        run: mvn clean install -DskipTests
+
+      - name: Login to docker hub
+        
+        run: docker login -u "yk1917" -p "yuvakiran12"
+
+
+      - name: Build docker image
+        run: docker build -t yk1917/sprintmanagementservice .
+
+      - name: Publish image to docker hub
+        run: docker push yk1917/sprintmanagementservice:latest
